@@ -1,10 +1,8 @@
-# 📦 Demand Forecasting and Inventory Optimization using Prophet
+# 📦 Inventory Demand Forecasting & Inventory Optimization using Prophet, ARIMA & SARIMA
 
-## 📌 Project Overview
+An end-to-end Supply Chain Analytics project that forecasts future demand for the top-selling product and converts the forecast into actionable inventory optimization decisions.
 
-Demand forecasting is a critical component of supply chain management. Accurate demand predictions enable organizations to optimize inventory levels, reduce operational costs, and improve customer satisfaction.
-
-In this project, a time-series forecasting model was developed using **Facebook Prophet** to forecast the demand of the **top-selling product** from the DataCo Supply Chain dataset. Based on the forecasted demand, inventory optimization metrics such as **Safety Stock**, **Reorder Point (ROP)**, and **Economic Order Quantity (EOQ)** were calculated to recommend an optimal inventory policy.
+The project compares **Prophet**, **ARIMA**, and **SARIMA** forecasting models, performs automatic model selection, validates seasonality using autocorrelation analysis, and recommends inventory policies such as Safety Stock, Reorder Point, and EOQ.
 
 ---
 
@@ -15,6 +13,20 @@ Traditional inventory planning often relies on manual estimation and historical 
 This project addresses this challenge by combining demand forecasting with inventory optimization to support data-driven inventory decisions.
 
 ---
+
+---
+
+# 🎯 Project Objectives
+
+- Forecast future demand of the top-selling product.
+- Compare Prophet, ARIMA and SARIMA forecasting models.
+- Automatically select the best forecasting model.
+- Detect seasonality before applying seasonal forecasting.
+- Optimize inventory using forecasting results.
+- Identify the key factors influencing demand.
+
+---
+
 
 ## ❓ Business Questions Addressed
 
@@ -47,20 +59,7 @@ These metrics help minimize stockouts while reducing inventory holding and order
 
 ---
 
----
 
-## 📈 Model Development
-
-The Prophet forecasting model includes:
-
-- Trend Modeling
-- Weekly Seasonality
-- Yearly Seasonality
-- Indian Public Holidays
-- Hyperparameter Tuning
-- Cross Validation
-
----
 
 ---
 
@@ -152,16 +151,32 @@ Where:
 - **S** = Ordering Cost per Order
 - **H** = Holding Cost per Unit per Year
 
-## 📊 Results
+---
 
-The project successfully:
+# 📉 Visualizations
 
-- Forecasted demand for the next **12 months**
-- Evaluated model performance using cross-validation
-- Calculated Safety Stock
-- Calculated Reorder Point
-- Calculated Economic Order Quantity (EOQ)
-- Recommended an inventory policy for the top-selling product
+The notebook includes visualizations for:
+
+- Demand Trend
+- Time Series Analysis
+- Prophet Forecast
+- Forecast Components
+- Cross Validation Results
+- ACF Plot
+- Model Comparison
+- Correlation Heatmap
+- Feature Importance
+
+---
+
+# 🏆 Key Results
+
+- Successfully forecasted demand for the top-selling product.
+- Tuned Prophet model achieved the best forecasting performance.
+- Auto ARIMA automatically optimized ARIMA and SARIMA parameters.
+- ACF analysis confirmed the absence of statistically significant weekly seasonality.
+- SARIMA therefore selected a non-seasonal configuration.
+- Forecasts were translated into practical inventory decisions including Safety Stock, Reorder Point, and EOQ.
 
 ---
 
